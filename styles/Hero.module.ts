@@ -18,7 +18,7 @@ export const ContentWrap = styled.div`
     align-items: center;
 
     h2{
-        font-size: 2.5rem;
+       font-size: 2.5rem;
     }
 
     p{

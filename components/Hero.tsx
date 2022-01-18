@@ -13,20 +13,20 @@ const Hero = () => {
             <MobileImageArea>
                 <div className='mobile-img-col-1'>
                     <MobileImageWrapper >
-                        <img src='/dev06.jpg' />
+                        <img src='/dev06.jpg' alt="person with colored background"/>
                     </MobileImageWrapper>
                 </div>
                 <div className='mobile-img-col-2'>
                     <MobileImageWrapper >
-                        <img src='/dev02.jpg' />
+                        <img src='/dev02.jpg' alt="person with colored background" />
                     </MobileImageWrapper>
                     <MobileImageWrapper >
-                        <img src='/dev01.jpg' />
+                        <img src='/dev01.jpg' alt="person with colored background" />
                     </MobileImageWrapper>
                 </div>
                 <div className='mobile-img-col-3'>
                     <MobileImageWrapper >
-                        <img src='/dev07.jpg' />
+                        <img src='/dev07.jpg'  alt="person with colored background"/>
                     </MobileImageWrapper>
                 </div>
             </MobileImageArea>
@@ -43,29 +43,29 @@ const Hero = () => {
             <ImageArea>
                 <div className='img-col-1'>
                     <ImageWrapper >
-                        <img src='/dev06.jpg' />
+                        <img src='/dev06.jpg'  alt="person with colored background"/>
                     </ImageWrapper>
                     <ImageWrapper >
-                        <img src='/dev01.jpg' />
+                        <img src='/dev01.jpg' alt="person with colored background"/>
                     </ImageWrapper>
                 </div>
                 <div className='img-col-2'>
                     <ImageWrapper >
-                        <img src='/dev03.jpg' />
+                        <img src='/dev03.jpg' alt="person with colored background"/>
                     </ImageWrapper>
                     <ImageWrapper >
-                        <img src='/dev04.jpg' />
+                        <img src='/dev04.jpg' alt="person with colored background" />
                     </ImageWrapper>
                     <ImageWrapper >
-                        <img src='/dev05.jpg' />
+                        <img src='/dev05.jpg' alt="person with colored background"/>
                     </ImageWrapper>
                 </div>
                 <div className='img-col-3'>
                     <ImageWrapper>
-                        <img src='/dev02.jpg' />
+                        <img src='/dev02.jpg' alt="person with colored background"/>
                     </ImageWrapper>
                     <ImageWrapper>
-                        <img src='/dev07.jpg' />
+                        <img src='/dev07.jpg' alt="person with colored background"/>
                     </ImageWrapper>
                 </div>
             </ImageArea>

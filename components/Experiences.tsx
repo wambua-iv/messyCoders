@@ -15,7 +15,7 @@ const Experiences: React.FC<Props> = ({ blog }) => {
         <Experience key={blog.username}>
             <div className='person-info'>
                 <UserImg>
-                    <img src="/user.jpg" />
+                    <img src="/user.jpg" alt='user image'/>
                 </UserImg>
                 <UserInfo>
                     <div>

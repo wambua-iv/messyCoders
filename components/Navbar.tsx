@@ -2,10 +2,12 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { Blog, Links, Logo, NavWrapper } from "../styles/Navbar.module"
 
+interface Props{
+    user : any
+}
 
-const Navbar = () => {
+const Navbar: React.FC<Props> = ({user}) => {
     const {route} = useRouter()
-    const user = false
     console.log(route)
     return (
         <NavWrapper>
@@ -14,7 +16,7 @@ const Navbar = () => {
                 <Logo>
                     <p>Messy Coders </p>
                 </Logo>
-                <Links>
+                <Links className="hide-for-mobile">
                     <Link href='/' >Home</Link>
                     <Link href='/' >About</Link>
                 </Links>

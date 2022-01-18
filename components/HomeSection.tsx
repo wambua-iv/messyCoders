@@ -8,7 +8,7 @@ interface Props {
 const HomeSection: React.FC<Props> = ({blogs}) => {
     return (
         <HomeSectionWrapper>
-            <h2>Shared Experiences</h2>
+            <h2>Ramblings & Experiences</h2>
             <ExperiencesWrapper>
                 {blogs.map(blog => <Experiences blog={blog }/>)}
             </ExperiencesWrapper>
@@ -17,4 +17,4 @@ const HomeSection: React.FC<Props> = ({blogs}) => {
 }
 
 export default HomeSection;
-
+ 

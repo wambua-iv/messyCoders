@@ -9,7 +9,14 @@ export const Global = createGlobalStyle`
 			Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 		background-color: #060507;
 		color: #fff;
-	}
+
+		.hide-for-mobile{
+			//hide fortablet and mobile devices
+			@media screen and (max-width: 1023px){
+            		display: none;
+           		}
+			}
+		}
 
 	a {
 		color: inherit;

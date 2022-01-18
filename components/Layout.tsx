@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Footer from "./Footer"
-import Navbar from "./Navbar"
 import { LayoutWrapper } from "../styles/Layout.module"
+import Navbar from './Navbar'
 
 
 interface Props {
-    children: any
+    children: any,
+    user: any
 }
 
-const Layout: React.FC<Props> = ({children}) => {
+const Layout: React.FC<Props> = ({children, user}) => {
     return (
         <>
         <Head>
@@ -18,8 +19,8 @@ const Layout: React.FC<Props> = ({children}) => {
 			junior developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <Navbar />
         <LayoutWrapper>
+            <Navbar user={user} />
             <main>
                 {children}
             </main>

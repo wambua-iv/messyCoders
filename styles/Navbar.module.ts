@@ -26,6 +26,10 @@ export const  Logo = styled.div`
     margin: .5rem;
     font-size: 2rem;
 
+    @media screen and (max-width: 1023px){
+                font-size: 1.6rem;
+            }
+
     p{
         margin: 0;
     }
@@ -75,6 +79,12 @@ export const Blog = styled.div`
     font-size: 1.25rem;
     position: relative;
     background-color: #e67906 ;
+
+    @media screen and (max-width: 1023px){
+                font-size: 1rem;
+                margin-top: .5rem;
+                padding: .5rem 1rem;
+            }
 
     &:hover{
         cursor: pointer;

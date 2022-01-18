@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Login from '../components/Login';
 import SignUp from '../components/SignUp';
 import { useForm } from '../CustomHooks';
+import { AuthWrapper } from '../styles/Auth.modules';
 
 const Auth: NextPage = () => {
     const [isSignUp, setSignUp] = useState(false);
@@ -19,7 +20,8 @@ const Auth: NextPage = () => {
     const handleChange_isSignUp = () => setSignUp(prev => !prev);
     return (
         <>
-        {isSignUp? (        
+            <AuthWrapper>
+            {isSignUp? (        
                 <SignUp 
                     value={value}
                     setValue={setValue}
@@ -31,7 +33,8 @@ const Auth: NextPage = () => {
                     value={value}
                     setValue={setValue}
                     handleChange_isSignUp={handleChange_isSignUp}/>  
-                 ) }         
+                 ) }       
+            </AuthWrapper>  
         </>
     )
 }

@@ -21,6 +21,7 @@ export const Global = createGlobalStyle`
 	a {
 		color: inherit;
 		text-decoration: none;
+		cursor: pointer;
 	}
 
 	* {

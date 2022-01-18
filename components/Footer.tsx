@@ -1,8 +1,10 @@
+import { FooterWrapper } from "../styles/Footer.modules"
+
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <FooterWrapper>
+            Messy Coders
+        </FooterWrapper>
     )
 }
 

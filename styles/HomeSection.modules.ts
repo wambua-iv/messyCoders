@@ -1,14 +1,16 @@
+import Image from "next/image";
 import styled from "styled-components";
+import { BreakPointsDown, BreakPointsUp } from "./Mixins";
 
 export const HomeSectionWrapper = styled.div`
-    width: 80%;
-    margin: 0 auto;
-
-    @media screen and (max-width: 1023px){
-               width: 90%;
-                margin: .3rem auto;
-            }     
-
+    width: 84%;
+    margin: 5rem auto;
+            
+    ${BreakPointsUp('large', `{
+             width: 90%;
+             margin: 0 auto;
+    }`)}
+            
     h2{
        font-size: 2rem;
 
@@ -21,26 +23,43 @@ export const HomeSectionWrapper = styled.div`
 `;
 
 export const ExperiencesWrapper = styled.div`
-    width: 80%;
-    margin: 5rem auto;
+    width: 60%;
+    margin: 5rem;
+
+    ${BreakPointsDown('large', `{
+            width: 92%;
+             margin: 2rem auto;
+    }`)}
 `;
 
 export const Experience = styled.div`
     padding: 1rem;
     margin: 3rem auto;
     border-radius: 1.5rem;
-    box-shadow: inset  -0.625rem -0.625rem 0.825rem  #1b1b1b, inset 0.625rem 0.625rem 0.825rem #0c090a;
+    box-shadow: inset  -0.625rem -0.625rem 0.825rem  #1b1b1b, inset 0.625rem 0.625rem 0.825rem #1b1b1b;
     box-shadow: -0.625rem -0.625rem 0.825rem #1b1b1b, 0.625rem 0.625rem 0.825rem #1b1b1b;
 
     
     
     .person-info{
         display: flex;
+        height: 15vh;
     }
 
     .experience{
-        width: 90%;
+        width: 75%;
         margin: 0 auto;
+        margin-left: 9rem;
+        margin-top: -2rem ;
+
+        @media screen and (max-width: 1024px){
+                width: 90%;
+                margin: 0 auto;
+                margin-top: -2rem ;
+            }
+        @media screen and (max-width: 375px){
+                 margin-top: -1rem ;
+            }
     }
 `;
 
@@ -49,11 +68,9 @@ export const UserInfo = styled.div`
     margin: 0 auto;
 
     @media screen and (max-width: 1023px){
-                width: 38vw;
-                margin-left: 2rem;
+                width: 80%;
+                margin-left: 1rem;
             }    
-
-    
 
     .username{
         margin: .5rem 0;
@@ -66,19 +83,24 @@ export const UserInfo = styled.div`
 `;
 
 export const UserImg = styled.div`
-    width: 10vw;
+     width: 10vw;
     height :  15vh;
+    border-radius: 1rem;
+    position: relative;
+    top: -45%;
 
     @media screen and (max-width: 1024px){
-                width: 15vw;
-                height :  15vh;
-            }   
+                width: 20vw;
+                height :  25vh;
+                border-radius: 1rem;
+                position: relative;
+                top: -25%;
+            }
+`;
 
-    img{
-        width: 100%;
-        height: 100%;
-        border-radius: 1rem;
-        position: relative;
-        top: -25%;
-    }
+
+export const SwapImage = styled(Image)`
+    width: 10vw;
+    height :  15vh;
+    border-radius: 1rem; 
 `;

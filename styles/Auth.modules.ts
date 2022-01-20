@@ -1,11 +1,5 @@
 import styled from "styled-components";
-
-// @mixin shadow {
-//     box-shadow : -.625rem -.625rem .825rem #fff,  .625rem .625rem .825rem #0004
-// }
-// @mixin shadow-inset {
-//     box-shadow : inset -.425rem -.425rem .525rem #fff, inset .425rem .425rem .525rem #0004
-// }
+import { BreakPointsDown, BreakPointsUp } from "./Mixins";
 
 export const AuthWrapper = styled.div`
     width: 100vw;
@@ -14,19 +8,16 @@ export const AuthWrapper = styled.div`
     color: #fff;
 
     .form-wrapper{
-        width: 35vw;
-        height: 65vh;
+        width: 46vw;
         margin: 6rem auto;
         border: 1px solid #9993;
         border-radius: 1rem;
         box-shadow: inset  -0.625rem -0.625rem 0.825rem  #1b1b1b, inset 0.625rem 0.625rem 0.825rem #0c090a;
         box-shadow: -0.625rem -0.625rem 0.825rem #1b1b1b, 0.625rem 0.625rem 0.825rem #1b1b1b;
 
-            @media screen and (max-width: 769px){
-                width: 80vw;
-                height: 65vh;
-            }
-    }
+        ${BreakPointsDown('medium', 
+                            `{  width: 80%;}`
+                            )}
 
     input{
         padding-top: 1rem;
@@ -37,6 +28,7 @@ export const AuthWrapper = styled.div`
         position: relative;
         background-color: transparent;
         color: #fff;
+        margin: 1rem auto;
         
         &:focus {
             outline: none;
@@ -47,6 +39,7 @@ export const AuthWrapper = styled.div`
     form{
         margin: 1rem;
     }
+}
 
     .sign-title {
         text-align: center;
@@ -56,8 +49,11 @@ export const AuthWrapper = styled.div`
 
     #full-length{
         width: 100%;
-        margin: 0 auto;
         display: block;
+
+        ${BreakPointsDown('medium', `{
+                        margin : 0 auto;}
+            `)}
     }
 
     .small{
@@ -67,7 +63,6 @@ export const AuthWrapper = styled.div`
 `;
 
 export const LoginWrapper = styled.div`
-    display: flex;
     flex-direction: column;
     line-height: 1.5;
     margin: 4rem auto;
@@ -76,9 +71,7 @@ export const LoginWrapper = styled.div`
 `;
 
 export const SignUpWrapper = styled.div`
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     line-height: 1.5;
     width: 80%;
     height: 80%;
@@ -87,19 +80,18 @@ export const SignUpWrapper = styled.div`
     .user-names,
     .passwords{
         width: 100%;
-        display: flex;
-        justify-content: space-between;
 
         input{
             width: 48%;
         }
 
-        @media screen and (max-width: 976px){
-            display: block;
-
-            input{
-                width: 100%;
-            }
-        }
+        ${BreakPointsDown('medium', `
+                { display: block;
+                    input{
+                        width: 100%;
+                        margin : 0 auto;
+                    }
+                }
+            `)}
     }
 `;

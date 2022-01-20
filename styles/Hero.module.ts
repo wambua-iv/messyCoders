@@ -1,31 +1,32 @@
+
+import Image from "next/image";
 import styled from "styled-components";
+import { BreakPointsDown, BreakPointsUp } from "./Mixins";
 
 export const HeroWrapper = styled.div`
-    width: 90%;
-    height: 90vh;
+    width: 98%;
+    height: 70vh;
     margin: 0 auto;
-   
 
-        @media screen and (min-width: 1024px){
+        ${BreakPointsUp('medium', `{
             display: flex;
-            justify-content: space-between;
-        }
+            height: 88vh;
+            justify-content: space-between;            
+        }`)}
 `;
 
 export const ContentWrap = styled.div`
     width: 45%;
-    display: flex;
     flex-direction: column;
     color: #fff;  
-    margin-top: 15rem;
+    margin-top: 11rem;
     margin-left: 3rem;
     align-items: center;
 
-        @media screen and (max-width: 1023px){
-                width: 90%;
-                margin: 0 auto;
-                margin-top: 9rem ;
-            }
+        ${BreakPointsDown('large', `{
+             width: 90%;
+             margin: 0 auto;
+        }`)}
 
         h2{
         font-size: 2.5rem;
@@ -40,7 +41,7 @@ export const ContentWrap = styled.div`
             font-size: 1.25rem;
 
             @media screen and (max-width: 1023px){
-            font-size: 1rem;
+                font-size: 1rem;
             }
         }
 `;
@@ -57,8 +58,12 @@ export const ImageArea = styled.div`
             display: none;
             }
 
+    ${BreakPointsDown('medium', `{
+        display: none;
+    }`)}
+
     .img-col-1{
-        width: 75%;
+        width: 55%;
         position: relative;
         top: 10%;
        
@@ -73,31 +78,23 @@ export const ImageArea = styled.div`
     }
 
     .img-col-3{
+        width: 55%;
         position: relative;
         top: 15%;
     }
 `;
 
 export const ImageWrapper = styled.div`
-    width: 90%;
-    height: 280px;
+    width: 96%;
     position: relative;
     margin: .5rem auto;
-   
-
-    img{
-        width: 100%;
-        height: 100%;
-        border-radius: 2rem;
-        margin: .5rem auto;
-        object-fit: cover;
-    }
 `;
 
 export const Btn = styled.div`
     width: 115%;
     height: 2.6rem;
     padding: .5rem;
+    margin-top: 1rem;
     font-size: 1.25rem;
     position: relative;
     text-align: center;
@@ -127,46 +124,41 @@ export const Btn = styled.div`
 `;
 
 export const MobileImageArea = styled.div`
-    margin: auto;
     width: 100%;
-    height: 40vh;
+    height: 70%;
     display: flex;
 
-    @media screen and (min-width: 1023px){
-            display: none;
-            }
+    ${BreakPointsUp('small', `{
+        display: none;
+    }`)}
 
         .mobile-img-col-1{
             width: 60%;
             position: relative;
-            bottom: -20%;
+            bottom: -30%;
         }
 
         .mobile-img-col-2{
-            width: 70%;
-            height: 70vh;
+            width: 60%;
             position: relative;
-            top: -22%;
+            top: -8%;
         }
 
     .mobile-img-col-3{
         width: 60%;
         position: relative;
-        top: 15%;
+        top: 20%;
     }
 `;
 
 export const MobileImageWrapper = styled.div`
-    width: 90%;
-    height: 30vh;
+    width: 96%;
+    position: relative;
     margin: .5rem auto;
-   
+`;
 
-    img{
-        width: 100%;
-        height: 100%;
+export const SwapImage = styled(Image)`
+        width: 20% !important;
         border-radius: 2rem;
-        margin: .5rem auto;
         object-fit: cover;
-    }
 `;

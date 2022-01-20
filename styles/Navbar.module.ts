@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BreakPointsDown } from './Mixins';
 
 export const NavWrapper = styled.nav`
     width: 100%;
@@ -26,9 +27,10 @@ export const  Logo = styled.div`
     margin: .5rem;
     font-size: 2rem;
 
-    @media screen and (max-width: 1023px){
-                font-size: 1.6rem;
-            }
+    ${BreakPointsDown('medium', `{
+            font-size: 1.6rem;
+    }`)}
+                
 
     p{
         margin: 0;

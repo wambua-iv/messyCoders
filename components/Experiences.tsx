@@ -1,5 +1,5 @@
 import React from 'react'
-import { Experience, UserImg, UserInfo } from '../styles/HomeSection.modules';
+import { Experience, SwapImage, UserImg, UserInfo } from '../styles/HomeSection.modules';
 
 interface Props {
     blog: {
@@ -15,7 +15,7 @@ const Experiences: React.FC<Props> = ({ blog }) => {
         <Experience key={blog.username}>
             <div className='person-info'>
                 <UserImg>
-                    <img src="/user.jpg" alt='user image'/>
+                    <SwapImage src="/user.jpg" alt='user image' width={120} height={160} quality={100}/>
                 </UserImg>
                 <UserInfo>
                     <div>

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { BreakPointsDown } from "./Mixins";
 
 export const Global = createGlobalStyle`
     html,
@@ -12,20 +13,35 @@ export const Global = createGlobalStyle`
 
 		.hide-for-mobile{
 			//hide fortablet and mobile devices
-			@media screen and (max-width: 1023px){
-            		display: none;
-           		}
+			${BreakPointsDown('large', `{
+					display: none;
+				}`)}
 			}
-		}
 
-	a {
-		color: inherit;
-		text-decoration: none;
-		cursor: pointer;
-	}
+			.flex{
+				display : flex;
+
+				&-jc-sb {
+					justify-content: space-between;
+				}
+
+				&-jc-c {
+					justify-content: center;
+				}
+				
+				&-ai-c {
+					align-items: center;
+				}
+			}
+
+	a{
+			color: inherit;
+			text-decoration: none;
+			cursor: pointer;
+		}
 
 	* {
 		box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-	}
+		}
  `;

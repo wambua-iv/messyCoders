@@ -12,10 +12,10 @@ interface Props {
 const SignUp: React.FC<Props> = ({ value, setValue, handleRegistration, handleChange_isSignUp }) => {
     return (
         <div className='form-wrapper'>
-            <SignUpWrapper>
+            <SignUpWrapper className='flex flex-jc-c'>
                 <span className="sign-title">Sign up</span>
                 <form>
-                    <div className="user-names">
+                    <div className="user-names flex flex-jc-sb">
                         <input
                             type="text"
                             name="firstName"
@@ -39,7 +39,7 @@ const SignUp: React.FC<Props> = ({ value, setValue, handleRegistration, handleCh
                         value={value.email}
                         onChange={setValue}
                     />
-                    <div className='passwords'>
+                    <div className='passwords flex flex-jc-sb'>
 
                         <input
                             type="password"

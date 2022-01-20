@@ -11,8 +11,8 @@ interface Props {
 
 const Login: React.FC<Props> = ({ value, setValue, handleLogin, handleChange_isSignUp }) => {
     return (
-        <div className='form-wrapper'>
-            <LoginWrapper>
+        <div  className='form-wrapper'>
+            <LoginWrapper className='flex flex-jc-c'>
                 <span className="sign-title">Sign in</span>
                 <form>
                     <input

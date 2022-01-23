@@ -5,7 +5,9 @@ import { Btn, ContentWrap,
     ImageWrapper, 
     MobileImageArea, 
     MobileImageWrapper, 
-    SwapImage} from "../styles/Hero.module"
+    SwapImage,
+    TabletImageArea,
+    TabletImageWrapper} from "../styles/Hero.module"
 
 const Hero = () => {
     return (
@@ -31,6 +33,27 @@ const Hero = () => {
                     </MobileImageWrapper>
                 </div>
             </MobileImageArea>
+
+            <TabletImageArea>
+                <div className='mobile-img-col-1'>
+                    <TabletImageWrapper >
+                        <SwapImage src='/dev06.jpg' alt="person with colored background" width={230} height={310} quality={100}/>
+                    </TabletImageWrapper>
+                </div>
+                <div className='mobile-img-col-2'>
+                    <TabletImageWrapper >
+                        <SwapImage src='/dev02.jpg' alt="person with colored background" width={230} height={310} quality={100}/>
+                    </TabletImageWrapper>
+                    <TabletImageWrapper >
+                        <SwapImage src='/dev01.jpg' alt="person with colored background" width={230} height={310} quality={100}/>
+                    </TabletImageWrapper>
+                </div>
+                <div className='mobile-img-col-3'>
+                    <TabletImageWrapper >
+                        <SwapImage src='/dev07.jpg'  alt="person with colored background" width={230} height={300} quality={100}/>
+                    </TabletImageWrapper>
+                </div>
+            </TabletImageArea>
 
             <ContentWrap className="flex">
                 <h2>Every Developer has an origin story.</h2>

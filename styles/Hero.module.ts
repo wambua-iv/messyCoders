@@ -5,10 +5,10 @@ import { BreakPointsDown, BreakPointsUp } from "./Mixins";
 
 export const HeroWrapper = styled.div`
     width: 98%;
-    height: 70vh;
+    height: 80vh;
     margin: 0 auto;
 
-        ${BreakPointsUp('medium', `{
+        ${BreakPointsUp('large', `{
             display: flex;
             height: 88vh;
             justify-content: space-between;            
@@ -25,8 +25,14 @@ export const ContentWrap = styled.div`
 
         ${BreakPointsDown('large', `{
              width: 90%;
+             margin: 5rem auto;
+        }`)}
+
+        ${BreakPointsDown('medium', `{
+             width: 90%;
              margin: 0 auto;
         }`)}
+
 
         h2{
         font-size: 2.5rem;
@@ -51,8 +57,6 @@ export const ImageArea = styled.div`
     height: 80vh;
     display: flex;
     margin-left: 5rem;
-    
-    
     
     @media screen and (max-width: 1024px){
             display: none;
@@ -135,7 +139,7 @@ export const MobileImageArea = styled.div`
         .mobile-img-col-1{
             width: 60%;
             position: relative;
-            bottom: -30%;
+            top: 24%;
         }
 
         .mobile-img-col-2{
@@ -147,7 +151,7 @@ export const MobileImageArea = styled.div`
     .mobile-img-col-3{
         width: 60%;
         position: relative;
-        top: 20%;
+        top: 18%;
     }
 `;
 
@@ -162,3 +166,47 @@ export const SwapImage = styled(Image)`
         border-radius: 2rem;
         object-fit: cover;
 `;
+
+export const TabletImageArea = styled.div`
+    width: 90%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+
+    ${BreakPointsDown('small', `{
+        display: none;
+    }`)}
+
+    ${BreakPointsUp('large', `{
+        display: none;
+    }`)}
+
+        .mobile-img-col-1{
+            width: 60%;
+            position: relative;
+            bottom: -20%;
+        }
+
+        .mobile-img-col-2{
+            width: 60%;
+            position: relative;
+            top: -15%;
+
+            ${BreakPointsDown('medium', `{
+                top: -4%;
+            }`)}
+        }
+
+    .mobile-img-col-3{
+        width: 60%;
+        position: relative;
+        top: 15%;
+    }
+    
+`
+
+export const TabletImageWrapper = styled.div`
+    width: 96%;
+    position: relative;
+    margin: .5rem auto;
+`

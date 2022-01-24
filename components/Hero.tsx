@@ -59,7 +59,7 @@ const Hero = () => {
                 <h2>Every Developer has an origin story.</h2>
                 <p>At the start of our software development journey we all write messy code. Here are the ramblings, thoughts and experiences of developers.</p>
                 <Btn>
-                    <Link href='/auth'><span className='join'>Join Community</span></Link>
+                    <Link href='/auth' passHref><span className='join'>Join Community</span></Link>
                     <span className='share'>Share Experience</span>
                 </Btn>
             </ContentWrap>

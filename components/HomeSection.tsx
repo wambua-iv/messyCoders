@@ -10,7 +10,7 @@ const HomeSection: React.FC<Props> = ({blogs}) => {
         <HomeSectionWrapper>
             <h2>Ramblings & Experiences</h2>
             <ExperiencesWrapper>
-                {blogs.map(blog => <Experiences blog={blog }/>)}
+                {blogs.map((blog, i) => <Experiences blog={blog } key={i}/>)}
             </ExperiencesWrapper>
         </HomeSectionWrapper>
     )

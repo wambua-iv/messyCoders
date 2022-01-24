@@ -14,7 +14,7 @@ const Navbar: React.FC<Props> = ({ user }) => {
             <div className='content'>
                 <div className="content-main">
                     <Logo>
-                        <Link href='/' ><p>Messy Coders</p></Link>
+                        <Link href='/' passHref><p>Messy Coders</p></Link>
                     </Logo>
                     <Links className="hide-for-mobile">
                         <Link href='/' >Home</Link>

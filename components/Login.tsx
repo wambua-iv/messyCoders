@@ -1,7 +1,7 @@
 import { Button as SignInBtn } from '@mui/material';
 import { Button as Btn } from '@material-ui/core';
 import { LoginWrapper } from '../styles/Auth.modules';
-import { User } from '../pages/auth';
+import  { User }  from '../pages/auth';
 
 interface Props {
     values: User,

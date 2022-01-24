@@ -24,12 +24,12 @@ const Hero = () => {
                         <SwapImage src='/dev02.jpg' alt="person with colored background" width={130} height={220} quality={100}/>
                     </MobileImageWrapper>
                     <MobileImageWrapper >
-                        <SwapImage src='/dev01.jpg' alt="person with colored background" width={130} height={220} quality={100}/>
+                        <SwapImage src='/dev07.jpg' alt="person with colored background" width={130} height={220} quality={100}/>
                     </MobileImageWrapper>
                 </div>
                 <div className='mobile-img-col-3'>
                     <MobileImageWrapper >
-                        <SwapImage src='/dev07.jpg'  alt="person with colored background" width={145} height={230} quality={100}/>
+                        <SwapImage src='/dev05.jpg'  alt="person with colored background" width={145} height={230} quality={100}/>
                     </MobileImageWrapper>
                 </div>
             </MobileImageArea>
@@ -45,12 +45,12 @@ const Hero = () => {
                         <SwapImage src='/dev02.jpg' alt="person with colored background" width={230} height={310} quality={100}/>
                     </TabletImageWrapper>
                     <TabletImageWrapper >
-                        <SwapImage src='/dev01.jpg' alt="person with colored background" width={230} height={310} quality={100}/>
+                        <SwapImage src='/dev07.jpg' alt="person with colored background" width={230} height={310} quality={100}/>
                     </TabletImageWrapper>
                 </div>
                 <div className='mobile-img-col-3'>
                     <TabletImageWrapper >
-                        <SwapImage src='/dev07.jpg'  alt="person with colored background" width={230} height={300} quality={100}/>
+                        <SwapImage src='/dev05.jpg'  alt="person with colored background" width={230} height={300} quality={100}/>
                     </TabletImageWrapper>
                 </div>
             </TabletImageArea>

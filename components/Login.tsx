@@ -1,15 +1,16 @@
 import { Button as SignInBtn } from '@mui/material';
 import { Button as Btn } from '@material-ui/core';
 import { LoginWrapper } from '../styles/Auth.modules';
+import { User } from '../pages/auth';
 
 interface Props {
-    value: any;
+    values: User,
     setValue: () => void;
     handleLogin: () => void;
     handleChange_isSignUp: () => void;
 }
 
-const Login: React.FC<Props> = ({ value, setValue, handleLogin, handleChange_isSignUp }) => {
+const Login: React.FC<Props> = ({ values, setValue, handleLogin, handleChange_isSignUp }) => {
     return (
         <div  className='form-wrapper'>
             <LoginWrapper className='flex flex-jc-c'>
@@ -20,7 +21,7 @@ const Login: React.FC<Props> = ({ value, setValue, handleLogin, handleChange_isS
                         name="email"
                         type="text"
                         placeholder="Email"
-                        value={value.email}
+                        value={values.email}
                         onChange={setValue}
                     />
                     <input
@@ -28,12 +29,12 @@ const Login: React.FC<Props> = ({ value, setValue, handleLogin, handleChange_isS
                         type="password"
                         name="password"
                         placeholder="Password"
-                        value={value.password}
+                        value={values.password}
                         onChange={setValue}
                     // showPassword={makeVisible}
                     />
                 </form>
-                <Btn color='primary' onClick={(() =>handleLogin)}> Sign in</Btn>
+                <Btn color='primary' onClick={(() =>handleLogin())}> Sign in</Btn>
                 <span className='small'>Not Yet Registered?
                     <SignInBtn onClick={handleChange_isSignUp}>Sign up</SignInBtn>
                 </span>

@@ -13,6 +13,10 @@ export const HeroWrapper = styled.div`
             height: 88vh;
             justify-content: space-between;            
         }`)}
+
+        ${BreakPointsUp('medium',`{
+            height: 85vh;
+        }`)}
 `;
 
 export const ContentWrap = styled.div`
@@ -22,15 +26,16 @@ export const ContentWrap = styled.div`
     margin-top: 11rem;
     margin-left: 3rem;
     align-items: center;
+    position: relative;
 
         ${BreakPointsDown('large', `{
              width: 90%;
-             margin: 5rem auto;
+             margin: 3rem auto;
         }`)}
 
         ${BreakPointsDown('medium', `{
              width: 90%;
-             margin: 0 auto;
+             margin: 1rem auto;
         }`)}
 
 
@@ -47,8 +52,11 @@ export const ContentWrap = styled.div`
             font-size: 1.25rem;
 
             @media screen and (max-width: 1023px){
-                font-size: 1rem;
+                font-size: 1.25rem;
             }
+            ${BreakPointsDown('small', `{
+                font-size: 1rem;
+            }`)}
         }
 `;
 
@@ -129,7 +137,7 @@ export const Btn = styled.div`
 
 export const MobileImageArea = styled.div`
     width: 100%;
-    height: 70%;
+    height: 60%;
     display: flex;
 
     ${BreakPointsUp('small', `{
@@ -169,9 +177,13 @@ export const SwapImage = styled(Image)`
 
 export const TabletImageArea = styled.div`
     width: 90%;
-    height: 75%;
+    height: 68%;
     margin: auto;
     display: flex;
+
+    /* @media screen and (min-width: 720px){
+                height: 80vh;
+            } */
 
     ${BreakPointsDown('small', `{
         display: none;

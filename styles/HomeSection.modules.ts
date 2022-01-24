@@ -6,9 +6,8 @@ export const HomeSectionWrapper = styled.div`
     width: 84%;
     margin: 5rem auto;
             
-    ${BreakPointsUp('large', `{
+    ${BreakPointsDown('medium', `{
              width: 90%;
-             margin: 0 auto;
     }`)}
             
     h2{
@@ -49,7 +48,7 @@ export const Experience = styled.div`
     .experience{
         width: 75%;
         margin: 0 auto;
-        margin-left: 9rem;
+        margin-left: 6.5rem;
         margin-top: -2rem ;
 
         @media screen and (max-width: 1024px){
@@ -57,9 +56,13 @@ export const Experience = styled.div`
                 margin: 0 auto;
                 margin-top: -2rem ;
             }
-        @media screen and (max-width: 375px){
-                 margin-top: -1rem ;
-            }
+
+        ${BreakPointsDown('tablet', `{
+            margin-top: -5rem;
+        }`)}
+        ${BreakPointsDown('medium', `{
+            margin-top: -1rem;
+        }`)}
     }
 `;
 
@@ -83,19 +86,32 @@ export const UserInfo = styled.div`
 `;
 
 export const UserImg = styled.div`
-     width: 10vw;
-    height :  15vh;
+     width: 8vw;
     border-radius: 1rem;
     position: relative;
-    top: -45%;
+    top: -35%;
 
-    @media screen and (max-width: 1024px){
-                width: 20vw;
-                height :  25vh;
-                border-radius: 1rem;
-                position: relative;
-                top: -25%;
-            }
+    ${BreakPointsDown('medium', `{
+        width: 15vw;
+        height :  20vh;
+        border-radius: 1rem;
+        position: relative;
+        top: -20%;
+    }`)
+    }
+
+    ${BreakPointsDown('tablet', `{
+            width: 9vw;
+            top: -20%;
+    }`)}
+
+    ${BreakPointsDown('small', `{
+            width: 20vw;
+            height :  25vh;
+            border-radius: 1rem;
+            position: relative;
+            top: -10%;
+    }`)}
 `;
 
 
